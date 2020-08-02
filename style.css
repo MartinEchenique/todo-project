@@ -1,0 +1,83 @@
+body{
+    background-color: b0cac7;
+    font-family: 'Inconsolata', monospace;
+}
+#add-task-form.hidden{
+display:none;
+flex-direction: column;
+max-width: 500px;
+
+}
+.project{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    border: 2px solid;
+    margin: 10px;
+    width: 90%;
+    background-color: #005086;
+    color:#f7d6bf;
+    border-color: black;
+
+}
+.selectedProject{
+    background-color: #318fb5;
+    color: black;
+
+}
+#add-task-form.flex{
+    display:flex;
+    flex-direction: column;
+    max-width: 500px;
+    
+    }
+
+#add-project-form.hidden{
+    display:none;
+    flex-direction: column;
+    max-width: 500px;
+}
+#add-project-form.flex{
+    display:flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+.hidden{
+    display:none;
+
+}
+
+#project-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 50%;
+}
+#todo-container{
+    display: flex;
+    justify-content: flex-start;
+}
+#project-selected-info{
+display: flex;
+flex-wrap: wrap;
+width: 50%;
+justify-content: start;
+border-color: black;
+}
+.todo-list{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.todo-div{
+    border: 2px solid ;
+    margin:5px;
+    padding:5px;
+    justify-content: start;
+    align-self: flex-start;
+    background-color: #318fb5;
+
+}

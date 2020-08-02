@@ -1,0 +1,59 @@
+<html>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<body>
+    <h1 id="world"></h1>
+
+    <button id="add-project">
+        add Project
+    </button>
+    <form id="add-project-form" class="hidden">
+        <label for="projectName">Name</label> <input id="projectName" type="text">
+
+        <button type="button" id="finishAddProject">Add</button>
+
+    </form>
+
+
+    <button id="add-task">
+        add task
+    </button>
+    <form id="add-task-form" class="hidden">
+        <label for="todoTitle">title</label> <input id="todoTitle" type="text">
+        <label for="todoDescription">description</label> <input id="todoDescription" type="text">
+        <label for="todoDueDate">DueDate</label> <input id="todoDueDate" type="text">
+        <label for="todoPriority">Priority</label>
+        <select name="priority-dropdown" id="todoPriority">
+            <option>High</option>
+            <option>Medium</option>
+            <option>Low</option>
+        </select>
+        <label for="todoNotes">Notes</label> <input id="todoNotes" type="text">
+        <label for="todoId">Id</label> <input id="todoId" type="text">
+
+        <button type="button" id="finishAddTask">Add</button>
+    </form>
+    <div id="todo-container">
+        <div id="project-container">
+
+
+
+        </div>
+
+        <div id="project-selected-info">
+
+
+
+        </div>
+    </div>
+
+</body>
+
+
+
+
+
+<script src="main.js"></script>
+
+</html>
