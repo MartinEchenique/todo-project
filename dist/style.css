@@ -81,3 +81,11 @@ border-color: black;
     background-color: #318fb5;
 
 }
+.edit-button{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Edit_Notepad_Icon.svg/600px-Edit_Notepad_Icon.svg.png);
+    background-repeat: no-repeat;
+  background-size: 20px 20px;
+  width: 25px;
+height: 25px;
+
+}

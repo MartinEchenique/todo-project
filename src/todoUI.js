@@ -59,7 +59,6 @@ function Ui() {
         });
     }
     const renderProjectSelected = (project) => {
-        const priorities = ["High", "Medium", "Low"]
         const projectSelectedContainer = document.getElementById("project-selected-info");
         projectSelectedContainer.innerHTML = "";
         const addOnlyText = (element, parent) => {
@@ -69,11 +68,16 @@ function Ui() {
                 parent.appendChild(elementContainer)
             }
         }
+        const onDoneProject = (todoDiv) => {
+            todoDiv.style.backgroundColor = "grey";
 
+        }
         if (project.length != 0) {
             project.forEach((projectSelected, i) => {
 
                 const todoDiv = document.createElement("div");
+                const editBtn = document.createElement("button");
+                editBtn.classList.add("edit-button")
                 const todoTitle = document.createElement("h3");
                 const todoAttList = document.createElement("ul");
                 const checkLabel = document.createElement("label");
@@ -82,6 +86,7 @@ function Ui() {
                 const todoCheck = document.createElement("input");
                 todoCheck.setAttribute("type", "checkbox");
                 todoCheck.setAttribute("id", `task-${i}-completed`);
+                todoCheck.addEventListener("change", () => (onDoneProject(todoDiv)));
                 todoDiv.classList.add("todo-div")
                 checkLabel.textContent = "Done";
                 todoTitle.textContent = projectSelected.title;
@@ -89,6 +94,8 @@ function Ui() {
                 addOnlyText(projectSelected.dueDate, todoAttList)
                 addOnlyText(projectSelected.notes, todoAttList)
                 addOnlyText(projectSelected.priority, todoAttList)
+                todoDiv.appendChild(editBtn);
+
                 todoDiv.appendChild(todoTitle);
                 todoDiv.appendChild(todoAttList);
                 todoDiv.appendChild(checkLabel);
@@ -107,7 +114,6 @@ function Ui() {
                         todoDiv.style.backgroundColor = "#00ff006e"
 
                         break;
-
                 }
 
             });
